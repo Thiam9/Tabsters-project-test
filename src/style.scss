@@ -1,0 +1,90 @@
+.list{
+    width: 20rem;
+    height: 20rem;
+    display:inline-flex;
+    margin: 3px;
+}
+.myButtons{
+    display: flex;
+    justify-content: space-around;
+}
+
+.main {
+    width: 100%;
+    display: grid;
+    // min-height: $minHeight;
+    grid-template-columns: 1fr;
+    grid-template-rows: 50px 1fr;
+    grid-template-areas: 
+      "1"
+      "2";
+  }
+
+  .radioMain {
+    grid-area: 1;
+    // border-radius: $borderRadius;
+    display: flex;
+    width: 100%;
+    padding: 1rem 2rem;
+    margin: 0 auto;
+    background:red;
+    user-select: none;
+    // box-shadow: $shadow;
+    li {
+        text-align: center;
+        list-style-type: none;
+        color: rgb(32, 38, 92);
+        font-size: 1.5rem;
+        text-transform: uppercase;
+        padding: 0 1rem;
+        flex: 1;
+        z-index: 2;
+        // @include verticalCenter;
+  
+        input[type="radio"]{
+          visibility: hidden;
+          position: relative;
+  
+          &:before {
+            content:'';
+            visibility: visible;
+            position: absolute;
+            top: -4px;
+            left: -12px;
+            height: .9rem;
+            width: .9rem;
+            border-radius: 50%;
+            border: 2px solid rgb(161, 70, 142);
+            cursor: pointer;
+            transition: 0.3s;
+          }
+          &:after {
+            content:'';
+            visibility: visible;
+            position: absolute;
+            top: -4px;
+            left: -12px; 
+            height: .9rem;
+            width: .9rem;
+            border-radius: 50%;
+            cursor: pointer;
+            transition: 0.3s;
+            background: rgb(161, 70, 142);
+            transform: scale(0);
+            transform-origin: center;
+          }
+        }
+        input:checked:after {
+          transform: scale(1.17) translate(-25%, -25%);
+          top: 2px;
+          left: -6px;
+        }
+        input:checked + label {
+          color: rgb(161, 70, 142);
+        }
+        label {
+          cursor: pointer;
+        }
+      }
+    }
+  

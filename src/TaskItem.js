@@ -11,11 +11,11 @@ export default class TaskItem extends Component {
 
             <div className="list-group list">
                 <a href="#" className="list-group-item list-group-item-action active">
-                    Id:{id}
+                    {name}
                 </a>
-                <a href="#" className="list-group-item list-group-item-action">Name:{name}</a>
-                <a href="#" className="list-group-item list-group-item-action">Status:{status}</a>
-                <a href="#" className="list-group-item list-group-item-action">Progress:{progress}</a>
+                
+                <a href="#" className="list-group-item list-group-item-action">{status}</a>
+                <a href="#" className="list-group-item list-group-item-action">{progress}</a>
                
             </div>
 

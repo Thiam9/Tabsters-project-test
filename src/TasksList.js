@@ -9,7 +9,7 @@ const TasksList = (props) => {
          {
                                    liste
                                     .filter(item => item.status.includes(selectedRadio))
-                                    .map(item => {
+                                    .map((item)=> {
 
                                         return (
                                             <TaskItem
